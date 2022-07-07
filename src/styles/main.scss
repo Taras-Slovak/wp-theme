@@ -1,14 +1,17 @@
-// Переменные, миксины, функции
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
+// Variables, Mixins, Functions
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
 
-// CSS-файлы библиотек
-@import "vendor/libs";
+// CSS-library
+@import 'vendor/libs';
 
-// Основное
-@import "base/fonts";
-@import "base/general";
+// Main
+@import 'base/fonts';
+@import 'base/general';
 
-// БЭМ-блоки
-@import "../blocks/modules/modules";
+// Components
+@import '../blocks/components/components';
+
+// BEM blocks
+@import '../blocks/modules/modules';

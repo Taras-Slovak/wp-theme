@@ -1,0 +1,58 @@
+.message {
+  position: relative;
+  width: 100%;
+  background: #22252e;
+  color: #fff;
+  &__inner {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 40px;
+    margin: auto;
+    gap: 32px;
+  }
+  &__alarm {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #ff8d00;
+    p {
+      padding-left: 5px;
+    }
+  }
+  &__data {
+    display: flex;
+    align-items: center;
+    color: #889099;
+    font-family: Roboto;
+    color: #889099;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    span {
+      padding-left: 5px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  &__close {
+    position: absolute;
+    padding: 10px 12px 10px 12px;
+    right: 0px;
+    top: 1px;
+
+    cursor: pointer;
+    transition: all 0.1s;
+    &:active {
+      transform: scale(0.8);
+    }
+    &:hover {
+      background: red;
+    }
+  }
+}
