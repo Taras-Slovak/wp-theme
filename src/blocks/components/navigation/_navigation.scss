@@ -1,0 +1,9 @@
+.nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  &__item {
+    margin-right: 30px;
+  }
+}
