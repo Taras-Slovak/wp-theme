@@ -1,12 +1,13 @@
 .message {
   position: relative;
-  width: 100%;
+  margin: auto;
   background: #22252e;
   color: #fff;
   &__inner {
     display: flex;
     align-items: center;
     width: max-content;
+    margin: auto;
     height: 40px;
     margin: auto;
     gap: 32px;
