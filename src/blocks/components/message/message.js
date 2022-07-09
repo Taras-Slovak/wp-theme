@@ -3,4 +3,6 @@
 const closeBtn = document.querySelector('.message__close');
 const message = document.querySelector('.message');
 
-closeBtn.onclick = () => message.classList.add('hide');
+closeBtn.onclick = () => {
+  message.remove();
+};

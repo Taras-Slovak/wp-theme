@@ -1,1 +1,0 @@
-import '%components%/message/message';

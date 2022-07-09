@@ -45,7 +45,6 @@
     padding: 10px 12px 10px 12px;
     right: 0px;
     top: 1px;
-
     cursor: pointer;
     transition: all 0.1s;
     &:active {
@@ -55,8 +54,4 @@
       background: red;
     }
   }
-}
-
-.hide {
-  transform: translateY(-100%);
 }

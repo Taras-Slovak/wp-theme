@@ -1,9 +1,82 @@
 .nav {
   position: absolute;
+  padding-top: 40px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
   &__item {
+    position: relative;
     margin-right: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      content: '';
+      width: 0%;
+      height: 3px;
+      background: #4cb649;
+      transition: all 0.2s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    padding-right: 20px;
+    &:hover {
+      .nav__list {
+        display: block;
+      }
+    }
+    &::after {
+      position: absolute;
+      top: 30%;
+      right: 0;
+      content: '';
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid black;
+    }
+  }
+
+  &__list {
+    display: none;
+    padding-top: 20px;
+    position: absolute;
+    width: max-content;
+    line-height: 2;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #4db6492e;
+    }
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }

@@ -1,18 +1,26 @@
 .header {
-  background: rgb(246, 243, 243);
-  //delete
-  position: relative;
   width: 100%;
+  position: fixed;
+  left: 0;
   height: 100px;
-  display: flex;
-  justify-content: space-between;
+  background-color: rgb(246, 246, 244);
+
+  &__inner {
+    position: relative;
+    max-width: 1600px;
+    margin: auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
   &__brand {
     margin-left: 205px;
+    color: #000000;
+    align-self: center;
   }
+
   &__btn-group {
     display: flex;
-    align-items: center;
-    align-content: center;
   }
   &__log-in {
     position: relative;
