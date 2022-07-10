@@ -1,7 +1,16 @@
-.main {
-  margin-top: 160px;
-}
-
 @import './includes/promo/promo';
 
 @import './includes/tags/tags';
+
+@import './includes/article/article';
+
+@import './includes/aside/aside';
+
+.main {
+  margin-top: 160px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
