@@ -1,5 +1,16 @@
 .aside {
   width: 400px;
+  &__image {
+    height: 454px;
+    width: 340px;
+    margin-top: 32px;
+    margin-left: auto;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .list {
