@@ -1,4 +1,4 @@
-// const getCloudContent = document.querySelector('.cloud__content');
+const getCloudContent = document.querySelector('.cloud__content');
 
 const tagList = [
   'Governments',
@@ -24,41 +24,24 @@ const tagList = [
   'Privacy',
 ];
 
-// function createTagElement(text = 'some') {
-//   let list = [];
-//   const tag = document.createElement('a');
-//   tag.className = 'cloud__tag';
-//   tagList.forEach((item) => {
-//     if (text.toLowerCase() == item.toLowerCase()) {
-//       // tag.classList.add('tag-small');
-//       console.log(text);
-//     }
-//   });
-
-//   tag.innerText = text.toLowerCase();
-//   return tag;
-// }
-
-// function generateTags() {
-//   tagList.map((tag) => {
-//     getCloudContent.append(createTagElement(tag));
-//   });
-// }
-
-// generateTags();
-// console.log(getCloudContent);
 let list = {};
 
 function filterTags() {
   tagList.forEach((element) => {
     list[element.toLowerCase()] = (list[element.toLowerCase()] || 0) + 1;
   });
-
   return list;
 }
-filterTags();
-// console.log(filterTags());
 
-for (let i in list) {
-  console.log(list[i]);
+filterTags();
+
+function generateTagsList() {
+  for (const [key, value] of Object.entries(list)) {
+    const linkTag = document.createElement('a');
+    linkTag.className = `tag-font-${value}`;
+    linkTag.innerHTML = key;
+    getCloudContent.appendChild(linkTag);
+  }
 }
+
+generateTagsList();
