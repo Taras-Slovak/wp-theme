@@ -8,7 +8,7 @@
         p.price__period MONTHLY
         span.price__currency 6.95
         .price__block-txt 
-          p Includes all VPN features.
+          p.price__vpn Includes all VPN features.
         a.price__btn(href='#') SIGN UP
 
       .price__item 
@@ -16,7 +16,7 @@
         span.price__currency 2.91
         .price__block-txt 
           .price__discount
-            span $166.80
+            span.price__red $166.80
             span $69.95 per two years
           p.price__save Save 58%*
         a.price__btn(href='#') SIGN UP
@@ -26,8 +26,47 @@
         span.price__currency 3.33
         .price__block-txt 
           .price__discount
-            span $83.40
+            span.price__red $83.40
             span $39.95 per year
           p.price__save Save 58%*
         a.price__btn(href='#') SIGN UP
+
+    .price__icons
+
+      p.price__pay-txt Ways to pay:
+
+      .price__icon
+        svg.price__visa
+          use(xlink:href="img/svg/sprite.svg#visa")
+
+      .price__icon
+        svg.price__master-card
+          use(xlink:href="img/svg/sprite.svg#master-card")
       
+      .price__icon
+        svg.price__american
+          use(xlink:href="img/svg/sprite.svg#american")
+
+      .price__icon
+        svg.price__pay-pal
+          use(xlink:href="img/svg/sprite.svg#pay-pal")   
+
+      .price__icon
+        svg.price__bitcoin
+          use(xlink:href="img/svg/sprite.svg#bitcoin") 
+
+      .price__icon
+        svg.price__okpay
+          use(xlink:href="img/svg/sprite.svg#okpay")  
+            
+      .price__icon
+        img.price__amazon(src="img/svg/amazon.svg", alt="amazon")
+
+      //- .price__icon
+      //-   svg.price__amazon
+      //-     use(xlink:href="img/svg/sprite.svg#amazon")  
+
+    .links 
+      a(href="#") How to pay anonymously
+
+      a(href="#") REDEEM GIFT CARD 
