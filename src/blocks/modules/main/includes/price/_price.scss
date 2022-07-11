@@ -33,6 +33,7 @@
     }
   }
   &__period {
+    position: relative;
     margin-top: 48px;
     font-size: 14px;
     font-weight: 700;
@@ -40,11 +41,22 @@
     text-align: center;
     text-transform: uppercase;
     color: #323642;
+    &::after {
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: #4cb649;
+    }
     &:nth-child(2) {
       margin-top: 59px;
     }
   }
   &__currency {
+    position: relative;
     display: block;
     margin-top: 38px;
     margin-left: 122px;
@@ -52,5 +64,23 @@
     font-weight: 300;
     letter-spacing: -1.5px;
     color: #22252e;
+
+    &::before {
+      position: absolute;
+      top: 13px;
+      left: -20px;
+      content: '$';
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 3px;
+      left: 103px;
+      content: '/mo.';
+      font-size: 24px;
+      font-weight: 300;
+    }
   }
 }
