@@ -1,11 +1,13 @@
 main.main
+  .wrapper 
+    include includes/promo/promo
 
-  include includes/promo/promo
+    include includes/tags/tags 
+    
+    .main__content
 
-  include includes/tags/tags 
-  
-  .main__content
+      include includes/article/article
 
-    include includes/article/article
+      include includes/aside/aside
 
-    include includes/aside/aside
+  include includes/price/price

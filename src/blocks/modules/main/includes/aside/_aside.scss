@@ -1,5 +1,13 @@
 .aside {
+  position: relative;
   width: 400px;
+  &::before {
+    position: absolute;
+    width: 1px;
+    height: 98%;
+    content: '';
+    background: #ebeced;
+  }
   &__image {
     height: 454px;
     width: 340px;
