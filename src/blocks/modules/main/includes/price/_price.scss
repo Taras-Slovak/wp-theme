@@ -212,4 +212,24 @@
   &__amazon {
     width: 120px;
   }
+
+  &__links {
+    margin-top: 33px;
+    padding-bottom: 57px;
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    a {
+      position: relative;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #4cb649;
+      text-decoration: none;
+      svg {
+        margin-left: 14px;
+      }
+    }
+  }
 }
