@@ -1,0 +1,103 @@
+.footer {
+  height: 620px !important;
+
+  &__title {
+    padding-top: 84px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 33px;
+    color: #000000;
+  }
+
+  &__content {
+    margin-top: 58px;
+    margin-bottom: 90px;
+    display: flex;
+  }
+
+  &__nav {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  &__company {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  &__program {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  &__learn {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  &__legal {
+    grid-area: 1 / 3 / 3 / 4;
+  }
+  &__nav-title {
+    margin-bottom: 20px;
+  }
+  &__nav-title {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323642;
+  }
+  &__link-group {
+    line-height: 31px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    color: #889099;
+    text-decoration: none;
+  }
+
+  &__about {
+    width: 600px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #889099;
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 30px;
+      &:nth-child(2) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__about-title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323642;
+  }
+
+  &__social {
+    margin-top: 40px;
+  }
+  &__social-title {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323642;
+  }
+  &__icons {
+    margin-top: 26px;
+    display: flex;
+    gap: 31px;
+  }
+}
