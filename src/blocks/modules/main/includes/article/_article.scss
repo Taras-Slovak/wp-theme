@@ -1,4 +1,7 @@
 .article {
+  @media screen and (max-width: 1100px) {
+    flex-shrink: 2;
+  }
   &__h2 {
     font-weight: 300;
     font-size: 32px;
