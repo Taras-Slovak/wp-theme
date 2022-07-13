@@ -33,15 +33,22 @@
   }
 
   &__tags {
-    margin-top: 8px;
+    display: flex;
+    margin-top: 10px;
     font-size: 12px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 
     a {
+      display: block;
       text-decoration: none;
       color: #4cb649;
-      padding-right: 3px;
+      padding-right: 5px;
+      transition: all 0.1s;
+
+      &:hover {
+        transform: translate(0px, -3px);
+      }
     }
   }
 
@@ -80,6 +87,13 @@
   font-size: 14px;
   letter-spacing: 0.8px;
   cursor: pointer;
+  transition: all 0.1s ease-in;
+  &:hover {
+    transform: scale(1.02);
+  }
+  &:active {
+    transform: scale(0.99);
+  }
 }
 
 .end-posts {

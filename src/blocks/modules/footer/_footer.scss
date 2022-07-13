@@ -57,6 +57,10 @@
     font-size: 14px;
     color: #889099;
     text-decoration: none;
+    transition: all 0.2s;
+    &:hover {
+      color: #4cb649;
+    }
   }
 
   &__about {
@@ -99,5 +103,17 @@
     margin-top: 26px;
     display: flex;
     gap: 31px;
+
+    a {
+      transition: all 0.2s ease;
+      &:hover {
+        &:hover {
+          transform: scale(1.2);
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
   }
 }

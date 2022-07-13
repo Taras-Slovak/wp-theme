@@ -39,6 +39,10 @@
     text-decoration: none;
     color: #fff;
     font-size: 12px;
+    transition: all 0.2s;
+    &:hover {
+      color: #4cb649;
+    }
   }
 
   &__close {

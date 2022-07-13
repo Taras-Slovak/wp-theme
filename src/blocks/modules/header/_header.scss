@@ -18,10 +18,14 @@
     margin-left: 205px;
     color: #000000;
     align-self: center;
+    font-family: 'Inter';
+    font-weight: 400;
   }
 
   &__btn-group {
     display: flex;
+    align-items: center;
+    padding-right: 55px;
   }
   &__log-in {
     position: relative;
@@ -29,6 +33,7 @@
     height: 40px;
     border: 1px solid #4cb649;
     border-radius: 30px;
+    transition: all 0.1s ease-in;
     &::after {
       position: absolute;
       left: 50%;
@@ -41,14 +46,21 @@
       color: #4cb649;
       font-size: 14px;
     }
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.96);
+    }
   }
   &__get-started {
     position: relative;
     width: 160px;
     height: 40px;
+    margin-left: 10px;
     background: linear-gradient(0deg, #4cb649 0%, #5ddf5a 100%);
-
     border-radius: 30px;
+    transition: all 0.1s ease-in;
     &::after {
       position: absolute;
       left: 50%;
@@ -61,6 +73,12 @@
       color: #fff;
       font-weight: 500;
       font-size: 14px;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.99);
     }
   }
 }

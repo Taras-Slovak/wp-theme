@@ -132,6 +132,13 @@
     color: #4cb649;
     font-weight: 500;
     font-size: 14px;
+    transition: all 0.1s ease-in;
+    &:hover {
+      transform: scale(1.03);
+    }
+    &:active {
+      transform: scale(0.99);
+    }
   }
 
   &__discount {
@@ -218,6 +225,7 @@
     padding-bottom: 57px;
     display: flex;
     justify-content: center;
+
     gap: 44px;
     a {
       position: relative;
@@ -227,6 +235,10 @@
       text-transform: uppercase;
       color: #4cb649;
       text-decoration: none;
+      transition: all 0.2s ease;
+      &:hover {
+        transform: translate(5px, 0);
+      }
       svg {
         margin-left: 14px;
       }

@@ -25,6 +25,9 @@
         color: #4cb649;
         transform: scale(1.1);
       }
+      &:active {
+        transform: scale(0.98);
+      }
     }
     .font-2 {
       font-size: 18px;
