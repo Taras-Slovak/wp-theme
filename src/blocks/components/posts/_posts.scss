@@ -35,8 +35,10 @@
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 10px;
     font-size: 12px;
+    line-height: 16px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 
@@ -71,6 +73,10 @@
     bottom: 0;
     left: 0;
     background: #ebeced;
+
+    @media screen and (max-width: 1200px) {
+      width: 95%;
+    }
   }
 }
 
