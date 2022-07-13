@@ -3,7 +3,7 @@
 const createPosts = () => {
   const posts = `
   <div class="post" data-aos="zoom-in">
-    <a href="#" href class="post__image"><img src="../img/pic/posts/Bitmap-0.webp" alt="post"></a>
+    <a href="#" href class="post__img-wrap"><img  class="post__img" class="post__img"src="../img/pic/posts/Bitmap-0.webp" alt="post"></a>
     <div class="post__content">
       <a href="#" class="post__title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises</a>
       <p class="post__txt">Derek Zimmer <span>| JUL 25, 2018</span></p>
@@ -16,7 +16,7 @@ const createPosts = () => {
     </div>
   </div>
   <div class="post" data-aos="zoom-in">
-    <a href="#"  class="post__image"><img src="../img/pic/posts/Bitmap-1.webp" alt="post"></a>
+    <a href="#"  class="post__img-wrap"><img  class="post__img"src="../img/pic/posts/Bitmap-1.webp" alt="post"></a>
     <div class="post__content">
       <a href="#" class="post__title">How to get cheaper flights using a VPN</a>
       <p class="post__txt">Jayson <span>| JUL 24, 2018</span></p>
@@ -29,7 +29,7 @@ const createPosts = () => {
     </div>
   </div>
   <div class="post" data-aos="zoom-in">
-    <a href="#" class="post__image"><img src="../img/pic/posts/Bitmap-2.webp" alt="post"></a>
+    <a href="#" class="post__img-wrap"><img  class="post__img"src="../img/pic/posts/Bitmap-2.webp" alt="post"></a>
     <div class="post__content">
       <a href="#" class="post__title">Net Neutrality was repealed, but the fight is far from over</a>
       <p class="post__txt">Chris Miller <span>| JUL 22, 2018</span></p>
@@ -78,14 +78,19 @@ createPosts();
 
 const hoverPost = () => {
   const main = document.querySelector('.main');
-  const title = document.querySelector('.post__title');
+  const title = document.querySelectorAll('.post__title');
 
   main.addEventListener('mouseover', (e) => {
     if (e.target.classList.contains('post__title')) {
       e.target.classList.add('post-hover');
-      console.log(e.target);
+    } else if (e.target.classList.contains('post__img')) {
+      e.target.parentElement.nextElementSibling.firstElementChild.classList.add(
+        'post-hover',
+      );
     } else {
-      title.classList.remove('post-hover');
+      title.forEach((el) => {
+        el.classList.remove('post-hover');
+      });
     }
   });
 };

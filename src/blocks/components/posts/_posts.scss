@@ -4,13 +4,11 @@
   padding: 30px 0;
   display: flex;
 
-  &__image {
+  &__img {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
     transition: all 0.2s;
-    img {
-      width: 280px;
-      height: 180px;
-      object-fit: cover;
-    }
   }
   &__content {
     padding-left: 40px;
