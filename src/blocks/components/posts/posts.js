@@ -1,7 +1,7 @@
 'use strict';
 
 const posts = `
-  <div class="post">
+  <div class="post" data-aos="zoom-in">
     <div class="post__image"><img src="../img/pic/posts/Bitmap-0.webp" alt="post"></div>
     <div class="post__content">
       <h3 class="post__title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises</h3>
@@ -14,7 +14,7 @@ const posts = `
       </div>
     </div>
   </div>
-  <div class="post">
+  <div class="post" data-aos="zoom-in">
     <div class="post__image"><img src="../img/pic/posts/Bitmap-1.webp" alt="post"></div>
     <div class="post__content">
       <h3 class="post__title">How to get cheaper flights using a VPN</h3>
@@ -27,7 +27,7 @@ const posts = `
       </div>
     </div>
   </div>
-  <div class="post">
+  <div class="post" data-aos="zoom-in">
     <div class="post__image"><img src="../img/pic/posts/Bitmap-2.webp" alt="post"></div>
     <div class="post__content">
       <h3 class="post__title">Net Neutrality was repealed, but the fight is far from over</h3>
