@@ -1,10 +1,11 @@
 'use strict';
 
-const posts = `
+const createPosts = () => {
+  const posts = `
   <div class="post" data-aos="zoom-in">
-    <div class="post__image"><img src="../img/pic/posts/Bitmap-0.webp" alt="post"></div>
+    <a href="#" href class="post__image"><img src="../img/pic/posts/Bitmap-0.webp" alt="post"></a>
     <div class="post__content">
-      <h3 class="post__title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises</h3>
+      <a href="#" class="post__title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises</a>
       <p class="post__txt">Derek Zimmer <span>| JUL 25, 2018</span></p>
       <div class="post__tags"><a href="#">Governments,</a><a href="#">Networking,</a><a href="#">Open Source, </a><a href="#">Privacy, </a><a href="#">Security    </a></div>
       <div class="post__comments">
@@ -15,9 +16,9 @@ const posts = `
     </div>
   </div>
   <div class="post" data-aos="zoom-in">
-    <div class="post__image"><img src="../img/pic/posts/Bitmap-1.webp" alt="post"></div>
+    <a href="#"  class="post__image"><img src="../img/pic/posts/Bitmap-1.webp" alt="post"></a>
     <div class="post__content">
-      <h3 class="post__title">How to get cheaper flights using a VPN</h3>
+      <a href="#" class="post__title">How to get cheaper flights using a VPN</a>
       <p class="post__txt">Jayson <span>| JUL 24, 2018</span></p>
       <div class="post__tags"><a href="#">Guides </a></div>
       <div class="post__comments">
@@ -28,9 +29,9 @@ const posts = `
     </div>
   </div>
   <div class="post" data-aos="zoom-in">
-    <div class="post__image"><img src="../img/pic/posts/Bitmap-2.webp" alt="post"></div>
+    <a href="#" class="post__image"><img src="../img/pic/posts/Bitmap-2.webp" alt="post"></a>
     <div class="post__content">
-      <h3 class="post__title">Net Neutrality was repealed, but the fight is far from over</h3>
+      <a href="#" class="post__title">Net Neutrality was repealed, but the fight is far from over</a>
       <p class="post__txt">Chris Miller <span>| JUL 22, 2018</span></p>
       <div class="post__tags"><a href="#">Governments,</a><a href="#">Net Neutrality,</a><a href="#">News    </a></div>
       <div class="post__comments">
@@ -42,32 +43,51 @@ const posts = `
   </div>
 `;
 
-let getAllPosts = document.querySelector('.posts');
-const getBtn = document.querySelector('.older-posts');
-let counter = 3;
+  let getAllPosts = document.querySelector('.posts');
+  const getBtn = document.querySelector('.older-posts');
+  let counter = 3;
 
-function renderPosts() {
-  let olderPosts = document.createElement('div');
-  olderPosts.innerHTML = posts;
-  getAllPosts.append(olderPosts);
-}
-
-function showEndPosts() {
-  let message = document.createElement('div');
-  message.className = 'end-posts';
-  message.innerHTML = `<p>There are no more posts to show ! &#128562</p>`;
-  getAllPosts.append(message);
-  getBtn.remove();
-}
-
-renderPosts();
-renderPosts();
-
-getBtn.addEventListener('click', () => {
-  if (counter !== 0) {
-    counter--;
-    renderPosts();
-  } else {
-    showEndPosts();
+  function renderPosts() {
+    let olderPosts = document.createElement('div');
+    olderPosts.innerHTML = posts;
+    getAllPosts.append(olderPosts);
   }
-});
+
+  function showEndPosts() {
+    let message = document.createElement('div');
+    message.className = 'end-posts';
+    message.innerHTML = `<p>There are no more posts to show ! &#128562</p>`;
+    getAllPosts.append(message);
+    getBtn.remove();
+  }
+
+  renderPosts();
+  renderPosts();
+
+  getBtn.addEventListener('click', () => {
+    if (counter !== 0) {
+      counter--;
+      renderPosts();
+    } else {
+      showEndPosts();
+    }
+  });
+};
+
+createPosts();
+
+const hoverPost = () => {
+  const main = document.querySelector('.main');
+  const title = document.querySelector('.post__title');
+
+  main.addEventListener('mouseover', (e) => {
+    if (e.target.classList.contains('post__title')) {
+      e.target.classList.add('post-hover');
+      console.log(e.target);
+    } else {
+      title.classList.remove('post-hover');
+    }
+  });
+};
+
+hoverPost();

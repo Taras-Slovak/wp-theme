@@ -4,4 +4,7 @@ html {
 .wrapper {
   max-width: 1200px;
   margin: auto;
+  @media screen and (max-width: 1250px) {
+    padding: 0 20px;
+  }
 }
