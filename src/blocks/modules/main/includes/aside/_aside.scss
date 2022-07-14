@@ -4,20 +4,31 @@
   @media screen and (max-width: 1100px) {
     flex-shrink: 1;
   }
+  @media screen and (max-width: 770px) {
+    flex-shrink: none;
+    width: 100%;
+  }
   &::before {
     position: absolute;
     width: 1px;
     height: 98%;
     content: '';
     background: #ebeced;
+    @media screen and (max-width: 770px) {
+      display: none;
+    }
   }
   &__image {
     height: 454px;
     width: 340px;
     margin-top: 32px;
     margin-left: auto;
+    @media screen and (max-width: 770px) {
+      width: 100%;
+    }
 
     img {
+      display: block;
       width: 100%;
       object-fit: cover;
     }
@@ -32,6 +43,10 @@
   font-weight: 400;
   font-size: 14px;
   padding-bottom: 30px;
+  @media screen and (max-width: 770px) {
+    max-width: 100%;
+    margin: auto;
+  }
 
   &:after {
     position: absolute;
