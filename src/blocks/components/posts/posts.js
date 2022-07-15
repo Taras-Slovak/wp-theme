@@ -3,7 +3,11 @@
 const createPosts = () => {
   const posts = `
   <div class="post" data-aos="zoom-in">
-    <a href="#" href class="post__img-wrap"><img  class="post__img" class="post__img"src="../img/pic/posts/Bitmap-0.webp" alt="post"></a>
+    <a href="#" href class="post__img-link">
+    <figure class="post__figure">
+      <img  class="post__img" class="post__img"src="../img/pic/posts/Bitmap-0.webp" alt="post">
+    </figure>
+    </a>
     <div class="post__content">
       <a href="#" class="post__title">The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises</a>
       <p class="post__txt">Derek Zimmer <span>| JUL 25, 2018</span></p>
@@ -15,8 +19,13 @@ const createPosts = () => {
       </div>
     </div>
   </div>
-  <div class="post" data-aos="zoom-in">
-    <a href="#"  class="post__img-wrap"><img  class="post__img"src="../img/pic/posts/Bitmap-1.webp" alt="post"></a>
+  <div class="post" data-aos="zoom-in">    
+    <a href="#"  class="post__img-link">
+      <figure class="post__figure">
+        <img  class="post__img"src="../img/pic/posts/Bitmap-1.webp" alt="post">          
+      </figure>
+    </a>  
+
     <div class="post__content">
       <a href="#" class="post__title">How to get cheaper flights using a VPN</a>
       <p class="post__txt">Jayson <span>| JUL 24, 2018</span></p>
@@ -29,7 +38,13 @@ const createPosts = () => {
     </div>
   </div>
   <div class="post" data-aos="zoom-in">
-    <a href="#" class="post__img-wrap"><img  class="post__img"src="../img/pic/posts/Bitmap-2.webp" alt="post"></a>
+    
+    <a href="#" class="post__img-link"> 
+      <figure class="post__figure">
+        <img class="post__img"src="../img/pic/posts/Bitmap-2.webp" alt="post">
+      </figure>
+    </a>
+    
     <div class="post__content">
       <a href="#" class="post__title">Net Neutrality was repealed, but the fight is far from over</a>
       <p class="post__txt">Chris Miller <span>| JUL 22, 2018</span></p>
@@ -78,18 +93,28 @@ createPosts();
 
 const hoverPost = () => {
   const main = document.querySelector('.main');
-  const title = document.querySelectorAll('.post__title');
+  const titles = document.querySelectorAll('.post__title');
+
+  const images = document.querySelectorAll('.post__img');
 
   main.addEventListener('mouseover', (e) => {
     if (e.target.classList.contains('post__title')) {
+      e.target.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.add(
+        'img-hover',
+      );
       e.target.classList.add('post-hover');
     } else if (e.target.classList.contains('post__img')) {
-      e.target.parentElement.nextElementSibling.firstElementChild.classList.add(
-        'post-hover',
+      e.target.classList.add('img-hover');
+      e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add(
+        'title-hover',
       );
     } else {
-      title.forEach((el) => {
-        el.classList.remove('post-hover');
+      titles.forEach((el) => {
+        el.classList.remove('title-hover');
+      });
+
+      images.forEach((el) => {
+        el.classList.remove('img-hover');
       });
     }
   });

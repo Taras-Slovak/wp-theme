@@ -8,12 +8,15 @@
     display: flex;
     flex-direction: column;
   }
-
+  &__figure {
+    overflow: hidden;
+  }
   &__img {
+    display: block;
     width: 280px;
     height: 180px;
     object-fit: cover;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
 
     @media screen and (max-width: 990px) {
       display: block;
@@ -144,6 +147,10 @@
   color: black;
 }
 
-.post-hover {
+.title-hover {
   color: #4cb649;
+}
+
+.img-hover {
+  transform: scale(1.1);
 }
