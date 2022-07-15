@@ -102,7 +102,7 @@ const hoverPost = () => {
       e.target.parentElement.previousElementSibling.firstElementChild.firstElementChild.classList.add(
         'img-hover',
       );
-      e.target.classList.add('post-hover');
+      e.target.classList.add('title-hover');
     } else if (e.target.classList.contains('post__img')) {
       e.target.classList.add('img-hover');
       e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add(
