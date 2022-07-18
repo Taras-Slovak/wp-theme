@@ -18,20 +18,33 @@
       display: none;
     }
   }
-  &__image {
+  &__image-wrap {
+    display: block;
     height: 454px;
     width: 340px;
     margin-top: 32px;
     margin-left: auto;
     @media screen and (max-width: 770px) {
       width: 100%;
+      height: auto;
     }
+  }
 
+  &__figure {
+    overflow: hidden;
     img {
       display: block;
       width: 100%;
       object-fit: cover;
+      transition: all 0.1s ease-in;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
+  }
+  &__cloud {
+    max-width: max-content;
+    margin: auto;
   }
 }
 

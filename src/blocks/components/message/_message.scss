@@ -3,6 +3,8 @@
   margin: auto;
   background: #22252e;
   color: #fff;
+  font-size: 12px;
+  font-weight: 400;
   &__inner {
     display: flex;
     align-items: center;
@@ -11,6 +13,23 @@
     height: 40px;
     margin: auto;
     gap: 32px;
+    @media screen and (max-width: 950px) {
+      height: 68px;
+      justify-content: space-around;
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 32px;
+    @media screen and (max-width: 950px) {
+      flex-direction: column;
+      gap: 9px;
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+    }
   }
   &__alarm {
     display: flex;
@@ -27,9 +46,6 @@
     color: #889099;
     font-family: Roboto;
     color: #889099;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0px;
     span {
       padding-left: 5px;
     }
@@ -38,25 +54,36 @@
   &__link {
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
     transition: all 0.2s;
     &:hover {
       color: #4cb649;
+    }
+    @media screen and (max-width: 950px) {
+      text-align: right;
+      margin-bottom: 11px;
+      padding-right: 15px;
     }
   }
 
   &__close {
     position: absolute;
     padding: 10px 12px 10px 12px;
-    right: 0px;
-    top: 1px;
+    right: 15px;
+    top: 0px;
     cursor: pointer;
+    color: #889099;
+    font-size: 18px;
+    font-weight: 700;
     transition: all 0.1s;
     &:active {
       transform: scale(0.8);
     }
     &:hover {
       background: red;
+    }
+    @media screen and (max-width: 950px) {
+      right: 5px;
+      top: 0spx;
     }
   }
 }
