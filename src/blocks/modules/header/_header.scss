@@ -14,7 +14,9 @@
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: 1200px) {
-      justify-content: space-around;
+      justify-content: space-between;
+
+      padding: 0px 10px 20px 60px;
     }
   }
   &__brand {
