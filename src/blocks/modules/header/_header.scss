@@ -13,10 +13,24 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     @media screen and (max-width: 1200px) {
-      justify-content: space-between;
-
-      padding: 0px 10px 20px 60px;
+      padding: 20px 10px 20px 60px;
+    }
+    @media screen and (max-width: 950px) {
+      height: 34px;
+      padding-top: 16px;
+    }
+  }
+  &__burger {
+    position: absolute;
+    align-self: center;
+    left: 0;
+    display: none;
+    width: 60px;
+    height: 60px;
+    @media screen and (max-width: 950px) {
+      display: block;
     }
   }
   &__brand {
@@ -28,6 +42,10 @@
     @media screen and (max-width: 1200px) {
       margin-left: 0px;
     }
+  }
+  &__nav {
+    height: max-content;
+    width: auto;
   }
 
   &__btn-group {

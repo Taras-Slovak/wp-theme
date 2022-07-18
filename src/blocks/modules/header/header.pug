@@ -1,13 +1,15 @@
-header.header(data-aos="fade-down")
+header.header(data-aos="fade-down")  
+
   include ../../components/message/message	
   
   .header__inner
-
-    include ../../components/burger/burger  
+    .header__burger
+      include ../../components/burger/burger  
 
     .header__brand Company Name    
 
-    include ../../components/navigation/navigation
+    .header__nav
+      include ../../components/navigation/navigation
 
     .header__btn-group
       a.header__log-in(href="#")
