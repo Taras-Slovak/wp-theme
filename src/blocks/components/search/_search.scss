@@ -3,6 +3,11 @@
   width: 340px;
   margin-left: auto;
 
+  @media screen and (max-width: 770px) {
+    width: 100%;
+    margin: 20px auto 40px auto;
+  }
+
   &__inner {
     position: relative;
   }
