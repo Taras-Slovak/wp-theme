@@ -30,7 +30,7 @@
     height: 340px;
     border-radius: 6px;
     background: #ffffff;
-    transition: all 0.2s ease;
+    transition: all 0.2s !important;
     align-self: center;
     &:hover {
       padding-top: 8px;

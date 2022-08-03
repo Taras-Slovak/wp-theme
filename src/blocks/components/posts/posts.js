@@ -5,7 +5,7 @@ const createPosts = () => {
   <div class="post" data-aos="zoom-in">
     <a href="#" href class="post__img-link">
     <figure class="post__figure">
-      <img  class="post__img" class="post__img"src="../img/pic/posts/Bitmap-0.webp" alt="post">
+      <img  class="post__img" class="post__img"src="img/pic/posts/Bitmap-0.webp" alt="post">
     </figure>
     </a>
     <div class="post__content">
@@ -22,7 +22,7 @@ const createPosts = () => {
   <div class="post" data-aos="zoom-in">    
     <a href="#"  class="post__img-link">
       <figure class="post__figure">
-        <img  class="post__img"src="../img/pic/posts/Bitmap-1.webp" alt="post">          
+        <img  class="post__img"src="img/pic/posts/Bitmap-1.webp" alt="post">          
       </figure>
     </a>  
 
@@ -41,7 +41,7 @@ const createPosts = () => {
     
     <a href="#" class="post__img-link"> 
       <figure class="post__figure">
-        <img class="post__img"src="../img/pic/posts/Bitmap-2.webp" alt="post">
+        <img class="post__img"src="img/pic/posts/Bitmap-2.webp" alt="post">
       </figure>
     </a>
     
